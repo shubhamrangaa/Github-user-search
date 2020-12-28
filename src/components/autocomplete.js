@@ -21,7 +21,6 @@ const Autocomplete = (props) => {
             const response = await fetch(url , {
               headers: {
                 Accept: "application/vnd.github.v3+json",
-                authorization: "token 917877877a23ff03781f85a3230acb4ccbe72d02"
               }
             });
             if (!response.ok) {
