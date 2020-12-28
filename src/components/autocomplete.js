@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-// import Newuser from "./users"
+import Newuser from "./users"
 
 const Autocomplete = (props) => {
   const [state, setState] = useState({ data: [] });
@@ -42,9 +42,9 @@ const Autocomplete = (props) => {
      <ul>
     { state.data.items !== undefined &&
         state.data.items.map((newuser) => (
-          <li key={newuser}>{newuser.login}</li>
+          <li key={newuser}><Newuser url={newuser.url} name={newuser.login} /></li>
+          
         ))
-      
     }
       </ul>
     </div>
